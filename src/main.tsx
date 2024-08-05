@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import CompoundPatternPage from './compound-pattern/CompoundPatternPage.tsx'
+import CompoundPatternPage from './pages/compound-pattern/CompoundPatternPage.tsx'
+import ErrorPage from './pages/error/ErrorPage.tsx'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+    errorElement: <ErrorPage />
   },
   {
     path: '/compound-pattern',
